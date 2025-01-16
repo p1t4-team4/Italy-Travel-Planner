@@ -1,0 +1,30 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  header {
+    background-color: black;
+    color: white;
+    padding: 15px;
+  }
+
+  main {
+    padding-top: 100px;
+  }
+  
+  h1 {
+    text-align: center;
+    padding:20px;
+    font-size: 3em;
+  }
+
+  #Italy {
+    background-image: url("./assets/css/ItalyOutline.jpg");
+  }
+
+  map {
+    color: black;
+  }
