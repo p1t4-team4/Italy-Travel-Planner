@@ -22,10 +22,10 @@ body {
   }
 
   #Italy {
-    background-image: url("./assets/css/ItalyOutline.jpg");
-    width: 100vmin;
-    height: 100vmin;
-    background-size: contain;
+    background-image: url("./ItalyOutline.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
