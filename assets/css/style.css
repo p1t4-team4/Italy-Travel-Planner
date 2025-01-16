@@ -22,7 +22,27 @@ body {
   }
 
   #Italy {
-    background-image: url("./assets/css/ItalyOutline.jpg");
+    background-image: url(./ItalyOutline.jpg);
+    margin: 0;
+    padding: 0;
+    height: 100vb;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    position: absolute;
+    padding: 10px 30px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    background-color: none;
+    color: black;
   }
 
   map {
