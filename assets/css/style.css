@@ -1,30 +1,79 @@
+
+
 body {
     position: relative;
     margin: 0;
     padding: 0;
+    background: linear-gradient(90deg, green, white, red);
+    justify-content: center;
+    align-items: center;
     
   }
   
   header {
-    background-color: black;
-    color: white;
-    padding: 15px;
+    background: linear-gradient(90deg, green, white, red);
+    color: black;
+    padding: 5px;
+    text-decoration: underline;
   }
 
-  main {
-    padding-top: 100px;
-  }
   
   h1 {
     text-align: center;
-    padding:20px;
+    padding:5px;
     font-size: 3em;
   }
 
-  #Italy {
-    background-image: url("./assets/css/ItalyOutline.jpg");
+  main {
+    display:flex;
+    justify-content: center;
+    height: 100vmin;
+    width: 100vw; 
   }
 
-  map {
+
+  #Italy {
+    background-image: url(../Img/ItalyOutline.jpg);
+    width: 100vmin;
+    height: 100vmin;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 50%;
+    display:center;
+    background-position: -10vmin 0;
+  }
+
+  button {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+ button:hover { 
+  color: white;
+  background-color: black;
+  transform: scale(0.9);
+  transition: 1s;
+  border-radius: 50%;
+ }
+
+  #buttonLink {
+    flex-direction: row;
+    float: inline-end;
+    text-align: right;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 20px;
+    text-decoration: none;
     color: black;
+    border: none;
+    cursor: pointer;
+    width: 33%;
+  }
+
+  footer {
+    text-align: center;
+    margin: 10px;
+    font-style: italic;
+    text-decoration: underline;
   }
