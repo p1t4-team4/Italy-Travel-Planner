@@ -49,13 +49,13 @@ body {
     border-radius: 50%;
   }
 
- button:hover { 
+ /* button:hover { 
   color: white;
   background-color: black;
   transform: scale(0.9);
   transition: 1s;
   border-radius: 50%;
- }
+ } */
 
   #buttonLink {
     flex-direction: row;
@@ -76,4 +76,22 @@ body {
     margin: 10px;
     font-style: italic;
     text-decoration: underline;
+  }
+
+  #cityWindow {
+    width: 8em;
+    height: 10em;
+    background-color: black; 
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  #have { 
+    background-color: green;
+  }
+
+  #haveNot {
+    background-color: red;
   }

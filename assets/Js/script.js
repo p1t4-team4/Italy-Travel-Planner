@@ -3,60 +3,64 @@ const milanButton = document.querySelector('#Milan');
 const comoButton = document.querySelector('#Como');
 const veniceButton = document.querySelector('#Venice');
 const naplesButton = document.querySelector('#Naples');
-const iHaveButton = document.querySelector('#Naples');
-const iHaveNotButton = document.querySelector('#Naples');
+const italy = document.querySelector("#Italy");
+const cityButtons = document.querySelectorAll('.btn');
 
-userInfo = {
-    Rome: false,
-    Naples: false,
-    Venice: false,
-    Como: false,
-    Milan: false,
+const cityNames = [];
+const windows = [];
+
+let cities = [
+    {name: "Rome", visited: false, button: romeButton},
+    {name: "Naples", visited: false, button: naplesButton},
+    {name: "Venice", visited: false, button: veniceButton},
+    {name: "Como", visited: false, button: comoButton},
+    {name: "Milan", visited: false, button: milanButton},
+];
+
+
+
+for(i = 0; i < cities.length; i++){
+    cityNames.push(cities[i].name);
 };
 
-if(userInfo.Rome){
-    romeButton.classList.add("btn-success");
-    romeButton.classList.remove("btn-danger");
-}else{
-    romeButton.classList.remove("btn-success");
-    romeButton.classList.add("btn-danger");
-};
+setCooler();
 
-if(userInfo.Milan){
-    milanButton.classList.add("btn-success");
-    milanButton.classList.remove("btn-danger");
-}else{
-    milanButton.classList.remove("btn-success");
-    milanButton.classList.add("btn-danger");
-};
+italy.addEventListener("click", e =>{
+    if (e.target.matches(".btn")){
+        i = cityNames.indexOf(e.target.getAttribute("id"));
+        if(cities[i].visited){
+            cities[i].visited = false;
+        }else{
+            cities[i].visited = true;
+        }
+        setCooler();
+    }
+});
 
-if(userInfo.Como){
-    comoButton.classList.add("btn-success");
-    comoButton.classList.remove("btn-danger");
-}else{
-    comoButton.classList.remove("btn-success");
-    comoButton.classList.add("btn-danger");
-};
+// italy.addEventListener("click", e =>{
+//     if (e.target.matches(".btn")){
+//         i = cityNames.indexOf(e.target.getAttribute("id"));
+//         if(windows[0] == undefined){
+//             windows.push(document.createElement('div'));
+//             windows[0].innerText = "hello";
+//             cities[i].button.appendChild(windows[0]);
+//             console.log(window[0]);
+//         }else{
+//             windows.pop();
+//             windows[0].innerText = "hello";
+//             cities[i].button.appendChild(windows[0]);
+//             console.log(window[0]);
+//         }
+//     }})
 
-if(userInfo.Venice){
-    veniceButton.classList.add("btn-success");
-    veniceButton.classList.remove("btn-danger");
-}else{
-    veniceButton.classList.remove("btn-success");
-    veniceButton.classList.add("btn-danger");
-};
-
-if(userInfo.Naples){
-    naplesButton.classList.add("btn-success");
-    naplesButton.classList.remove("btn-danger");
-}else{
-    naplesButton.classList.remove("btn-success");
-    naplesButton.classList.add("btn-danger");
-};
-
-iHaveButton.addEventListener('click', function (){
-    localStorage.setItem("Rome", true);
-})
-iHaveNotButton.addEventListener('click', function (){
-    localStorage.setItem("Rome", false);
-})
+function setCooler(){
+    for(i = 0; i < cities.length; i++){
+        if(cities[i].visited){
+            cities[i].button.classList.add("btn-success");
+            cities[i].button.classList.remove("btn-danger");
+        }else{
+            cities[i].button.classList.remove("btn-success");
+            cities[i].button.classList.add("btn-danger");
+        };
+    }; 
+}
