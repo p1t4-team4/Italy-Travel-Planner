@@ -37,9 +37,45 @@ italy.addEventListener("click", e =>{
     }
 });
 
-// italy.addEventListener("click", e =>{
-//     if (e.target.matches(".btn")){
-//         i = cityNames.indexOf(e.target.getAttribute("id"));
+italy.addEventListener("click", e =>{
+    if (e.target.matches(".btn")){
+        
+        if(document.querySelector("#cityWindow") != undefined){
+            Win = document.querySelector("#cityWindow");
+            Win.remove();
+        }
+        i = cityNames.indexOf(e.target.getAttribute("id"));
+        cityWindow = document.createElement('div');
+        cityWindow.setAttribute("id", "cityWindow");
+        X = document.createElement('div');
+        X.setAttribute("id", "X");
+        X.innerText = "✖";
+        yesNo = document.createElement('div');
+        yesNo.setAttribute("id", "yesNo");
+        have = document.createElement('div');
+        have.setAttribute("id", "have");
+        have.innerText = "Been";
+        haveNot = document.createElement('div');
+        haveNot.innerText = "Not Been";
+        haveNot.setAttribute("id", "haveNot");
+        Blog = document.createElement('div');
+        Blog.setAttribute("id", "blog");
+        Blog.innerText = "Blog";
+        cities[i].button.appendChild(cityWindow);
+        cityWindow.appendChild(X)
+        cityWindow.appendChild(yesNo);
+        yesNo.appendChild(have);
+        yesNo.appendChild(haveNot);
+        cityWindow.appendChild(Blog);
+        }
+    });
+
+
+
+
+
+
+
 //         if(windows[0] == undefined){
 //             windows.push(document.createElement('div'));
 //             windows[0].innerText = "hello";
@@ -52,6 +88,8 @@ italy.addEventListener("click", e =>{
 //             console.log(window[0]);
 //         }
 //     }})
+
+        
 
 function setCooler(){
     for(i = 0; i < cities.length; i++){
