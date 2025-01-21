@@ -7,7 +7,7 @@ body {
     background: linear-gradient(90deg, green, white, red);
     justify-content: center;
     align-items: center;
-    
+    font-family: 'Times New Roman', Times, serif;
   }
   
   header {
@@ -49,13 +49,13 @@ body {
     border-radius: 50%;
   }
 
- button:hover { 
+ /* button:hover { 
   color: white;
   background-color: black;
   transform: scale(0.9);
   transition: 1s;
   border-radius: 50%;
- }
+ } */
 
   #buttonLink {
     flex-direction: row;
@@ -76,4 +76,57 @@ body {
     margin: 10px;
     font-style: italic;
     text-decoration: underline;
+  }
+
+  #cityWindow {
+    width: 8em;
+    height: 10em;
+    background-image: url(../Photos/Rome.jpg); 
+    background-size: cover;
+    /* background-position: center;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: end; */
+    /* grid-auto-columns: span 2; */
+    align-content: end; */
+  }
+
+  #yesNo {
+    display: grid;
+    background-position: center;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    grid-auto-columns: span 2;
+    align-content: end;
+    font-size: .8em;
+  }
+
+  #X {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px;
+    padding-right: 10px;
+  }
+  #have { 
+    background-color: green;
+  
+  }
+
+  #haveNot {
+    background-color: red;
+  }
+
+  #blog {
+    background-color: black;
+    align-items: end;
+    width: 100%;
+    
+  }
+
+  #textBox {
+    width: 20%;
+    height: 40%;
+    margin: 10px;
   }
