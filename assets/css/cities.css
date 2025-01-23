@@ -1,21 +1,29 @@
 body {
     position: relative;
     margin: 0;
-    padding: 50px;
+    padding: 10px;
     background: linear-gradient(90deg, green, white, red);
     justify-content: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
   }
+  nav {
+    position: relative;
+  }
+  /* nav{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  } */
   header {
     background: linear-gradient(90deg, green, white, red);
     color: black;
     padding: 5px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
   }
   #buttonLink {
     flex-direction: row;
-    float: inline-end;
+    justify-content: right;
     text-align: right;
     font-size: 1.5em;
     padding: 10px;
@@ -24,7 +32,7 @@ body {
     color: black;
     border: none;
     cursor: pointer;
-    width: 33%;
+    /* width: 33%; */
   }
   main {
     display:flex;
@@ -36,41 +44,53 @@ body {
     text-align: center;
     padding:5px;
     font-size: 3em;
+   text-decoration: underline;
   }
+  
   img {
-    width: 40%;
-    /* float: right; */
+   width: 30vmin;
+   height: 20vmin;
+   padding: 15px;
+   display: block;
   }
+  
 
 
     .RomeP,
     .NaplesP,
     .MilanP {
+        align-self: flex-end;
         float: left;
-        width: 55%;
+        /* height: 200px;
+        width: 350px; */
+        width: 55vmin;
+        justify-content: left;
+        padding: 20px;
     }
 
   .ComoP,
   .VeniceP {
-    float: right;
-    width: 55%;
-    justify-content: right;
     
+    float: right;
+    /* height: 200px;
+    width: 350px; */
+    width: 55vmin;
+    justify-content: right;
+    padding: 20px;
   }
 
   .Como,
   .Venice {
-    flex: left;
-    width: 40%;
+    float: left;
     justify-content: left;
-  }
+ }
 
 .Rome,
-.Napels,
+.Naples,
 .Milan {
-    flex: Right;
-    width: 40%;
+    float: right;
     justify-content: right;
+
 }
   
   

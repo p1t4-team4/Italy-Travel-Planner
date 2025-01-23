@@ -1,11 +1,9 @@
-const activitiesForm = document.querySelector('#activities');
+const activitiesInput = document.querySelector('#activitiesText');
+const activitiesForm = document.querySelector('#activitiesForm');
+const activitiesList = document.querySelector('#activitiesList');
 const budgetForm = document.querySelector('#budget');
 const hero = document.querySelector('#hero');
 const facts = document.querySelector('#facts');
-
-
-
-
 
 Cities=[
     {Name:"Rome", imagesURLs:[], blrup:"", items:[], plans:[]},
@@ -15,12 +13,32 @@ Cities=[
     {Name:"Milan", imagesURLs:[], blrup:"", items:[], plans:[]}
 ];
 
-plans = [];
+activities = [];
+
+renderActivities()
+
 activitiesForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    const planText = todoInput.value.trim();
+    const activitiesText = activitiesInput.value.trim();
     if (planText === '') {
       return;
     }
-    plans.push(todoText);
-    todoInput.value = '';
+    activities.push(activitiesText);
+    activitiesInput.value = '';
+
+    renderActivities()
+});
+
+function renderActivities() {
+       activitiesList.innerHTML = '';
+  
+    for (let i = 0; i < activities.length; i++) {
+      const activity = activities[i];
+  
+      const li = document.createElement('li');
+      li.textContent = activity;
+      li.setAttribute('data-index', i);
+
+      todoList.appendChild(li);
+    }
+  }
