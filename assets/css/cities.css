@@ -1,0 +1,76 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 50px;
+    background: linear-gradient(90deg, green, white, red);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  header {
+    background: linear-gradient(90deg, green, white, red);
+    color: black;
+    padding: 5px;
+    text-decoration: underline;
+  }
+  #buttonLink {
+    flex-direction: row;
+    float: inline-end;
+    text-align: right;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+    width: 33%;
+  }
+  main {
+    display:flex;
+    justify-content: center;
+    height: 100vmin;
+    width: 100vw; 
+  }
+  h1 {
+    text-align: center;
+    padding:5px;
+    font-size: 3em;
+  }
+  img {
+    width: 40%;
+    /* float: right; */
+  }
+
+
+    .RomeP,
+    .NaplesP,
+    .MilanP {
+        float: left;
+        width: 55%;
+    }
+
+  .ComoP,
+  .VeniceP {
+    float: right;
+    width: 55%;
+    justify-content: right;
+    
+  }
+
+  .Como,
+  .Venice {
+    flex: left;
+    width: 40%;
+    justify-content: left;
+  }
+
+.Rome,
+.Napels,
+.Milan {
+    flex: Right;
+    width: 40%;
+    justify-content: right;
+}
+  
+  
