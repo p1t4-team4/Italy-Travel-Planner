@@ -36,9 +36,11 @@ body {
   }
   main {
     display:flex;
-    justify-content: center;
-    height: 100vmin;
-    width: 100vw; 
+    /* flex-direction: column; */
+    /* align-items: flex-start;
+    margin: 0 auto; */
+    /* height: 100vmin;
+    width: 100vw;  */
   }
   h1 {
     text-align: center;
@@ -47,50 +49,57 @@ body {
    text-decoration: underline;
   }
   
-  img {
-   width: 30vmin;
-   height: 20vmin;
+  /* img {
+   width: 60%;
+   height: 40%;
    padding: 15px;
    display: block;
-  }
-  
+   float: right; */
 
-
-    .RomeP,
-    .NaplesP,
-    .MilanP {
-        align-self: flex-end;
-        float: left;
-        /* height: 200px;
-        width: 350px; */
-        width: 55vmin;
-        justify-content: left;
-        padding: 20px;
-    }
-
-  .ComoP,
-  .VeniceP {
-    
+  #imgR {
     float: right;
-    /* height: 200px;
-    width: 350px; */
-    width: 55vmin;
-    justify-content: right;
+    width: 30%;
     padding: 20px;
+    padding-top: 0;
+    padding-left: 40px;
+  
+  }
+  
+  #imgL {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    padding-top: 0;
+    padding-right: 40px;
+  }
+  
+  strong {
+    font-size: 3vw;
   }
 
-  .Como,
-  .Venice {
-    float: left;
-    justify-content: left;
- }
-
-.Rome,
-.Naples,
-.Milan {
-    float: right;
-    justify-content: right;
-
-}
-  
-  
+   .RomeP,
+   .NaplesP,
+   .MilanP {
+     display: flex;
+     align-items: center;
+     justify-content: right;
+     padding: 20px;
+     text-align: justify;
+     font-size: 1.5vw;
+    border-bottom: 1px solid black;
+   }
+   
+   .ComoP,
+   .VeniceP {
+   display: flex;
+   align-items: center;
+   justify-content: left;
+     padding: 20px;
+     text-align: justify;
+     font-size: 1.55vw;
+     border-bottom: 1px solid black;
+   }
+   
+   footer { 
+    text-align: center;
+   }

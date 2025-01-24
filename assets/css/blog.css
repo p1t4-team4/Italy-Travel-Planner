@@ -1,0 +1,36 @@
+ /* #Hotel {
+    display: flex;
+     align-items: center;
+     justify-content: right;
+     /* padding: 20px; */
+     /* text-align: justify;
+     width: 50%;
+     height: 5%;
+}  */
+
+/* #City {
+    height: 5%;
+    width: 40%;
+} */
+
+/* #Places { 
+    display: flex;
+    height: 5%;
+    justify-content: left;
+} */
+ /* Main {
+    display: flex;
+ } */
+
+
+
+#City,
+#Places {
+    display: flex;
+    flex-direction: column;
+}
+
+/* #Hotel,
+#Restaurants {
+    display: flex;
+    /* flex-direction: column; */
