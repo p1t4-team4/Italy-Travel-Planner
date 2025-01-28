@@ -19,8 +19,16 @@ body {
     background: linear-gradient(90deg, green, white, red);
     color: black;
     padding: 5px;
+    /* font-family: Brush Script MT; */
+    font-style: italic;
+
     /* text-decoration: underline; */
   }
+
+  nav {
+    font-family: 'Times New Roman', Times, serif !important;
+  }
+
   #buttonLink {
     flex-direction: row;
     justify-content: right;
@@ -46,7 +54,7 @@ body {
     text-align: center;
     padding:5px;
     font-size: 3em;
-   text-decoration: underline;
+   /* text-decoration: underline; */
   }
   
   /* img {

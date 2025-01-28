@@ -14,7 +14,13 @@ body {
     background: linear-gradient(90deg, green, white, red);
     color: black;
     padding: 5px;
-    text-decoration: underline;
+    /* font-family: Brush Script MT; */
+    font-style: italic;
+    /* text-decoration: underline; */
+  }
+
+  nav {
+    font-family: 'Times New Roman', Times, serif !important;
   }
 
   
@@ -105,11 +111,34 @@ body {
     background-color: red;
   }
 
+  #haveNot:hover { 
+    /* background-color: white; */
+    text-decoration: underline;
+    font-size: 1.1em;
+    /* box-shadow: 1.5px 1.5px rgb(197, 77, 77); */
+  }
+
+  #have:hover {
+    text-decoration: underline;
+    font-size: 1.1em;
+    /* box-shadow: 1.5px 1.5px rgb(84, 187, 106); */
+  }
+
+  #blog:hover {
+    text-decoration: underline;
+    font-size: 1.1em;
+  }
+
   #blog {
     background-color: black;
     align-items: end;
     width: 100%;
     
+  }
+
+  #X:hover {
+    /* transition: 500ms; */
+    font-size: 1.1em;
   }
 
   #textBox {

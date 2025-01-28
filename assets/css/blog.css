@@ -21,16 +21,66 @@
  /* Main {
     display: flex;
  } */
-
-
+* {
+    padding-left: 1vmin;
+    padding-right: 1vmin;
+    
+}
 
 #City,
 #Places {
     display: flex;
-    flex-direction: column;
+     /* justify-content: center; */
+     /* padding: 20px; */
+     text-align: justify;
+     flex-direction: column;
+     font-size: xx-large;
 }
 
-/* #Hotel,
+#Hotel,
 #Restaurants {
     display: flex;
-    /* flex-direction: column; */
+   /* justify-content: left; */
+     /* padding: 20px; */
+     text-align: justify;
+     flex-direction: column;
+     font-size: xx-large;
+
+}
+
+#Journal {
+    display: flex;
+    justify-content: right;
+      /* padding: 20px; */
+      text-align: justify;
+      flex-direction: column;
+      /* width: 50%; */
+      font-size: xx-large;
+      /* height: 60%; */
+}
+
+#City input {
+    height: 5vmin;
+    width: 20vmin;
+    /* height: 350px; */
+}
+
+#Places  {
+    height: 78vmin;
+    width: 20vmin;
+}
+
+#Restaurants input {
+    height: 75vmin;
+    width: 20vmin;
+}
+
+#Journal input {
+    height: 83vmin;
+    width: 50vmin;
+}
+
+#Hotel input {
+    height: 5vmin;
+    width: 20vmin;
+}
