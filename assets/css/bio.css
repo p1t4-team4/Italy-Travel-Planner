@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.5);
     color: black;
     margin: 0;
     padding:0 ;
@@ -10,84 +10,11 @@ nav {
     position: relative;
 }
 
-/* .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-div.custom-border{
-    border: 5px solid black;
-    padding: 10px;
-    border-radius: 8px;
-    margin: 10px 1px;
-} */ */
-/* trying to add the inline padding below to the div */
-/* div.padding-color{
-    padding:10px; 
-    background-color: #f4eded; 
-}
-d
-header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: green;
-}   
-
-.bio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.bio img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.bio p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 600px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    color: #28fa10;
-} */
-
-/* @media screen and (min-width: 1200px) {
-    .custom-border {
-        width: 60%;
-        right: 50%;
-    }
-} */
-
-/* .h3-with-bg {
-    justify-content: flex-end;
-    background-image: url('../images/bg.jpg'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    padding-right: 50px; 
-} */
-
-
-
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
 }
@@ -97,15 +24,15 @@ div.custom-border {
     padding: 15px; 
     border-radius: 8px;
     margin: 20px auto; 
-    background-color: #f9f9f9; 
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 
 div.padding-color {
     padding: 15px; 
-    background-color: #f7f7f7; 
+    background-color: white; 
     border-radius: 8px; 
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .bio {
@@ -167,6 +94,3 @@ div.padding-color {
     color: white; /
 }
 
-section {
-    background-color: rgba(0, 0, 0, 0.5);
-}
