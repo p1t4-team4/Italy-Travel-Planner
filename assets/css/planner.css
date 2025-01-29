@@ -6,6 +6,8 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
+    color: black;
+    padding: 5px;
 }
 
 #buttonLink {
@@ -66,7 +68,7 @@ footer {
 #journal
 /* #activities2 */
  {
-    background-color: crimson;
+    background-color: rgba(0, 0, 0, 0.5);
     height: 30em;
     width: 33%;
     border:.2em;
@@ -110,7 +112,7 @@ footer {
 #budget
 /* #budget2 */
  {
-    background-color: crimson;
+    background-color: rgba(0, 0, 0, 0.5);
     height: 30em;
     width: 66%;
     border:.2em;
@@ -143,7 +145,7 @@ footer {
 
 #stack1 {
     display: flex;
-    width: 100%;
+    width: 98%;
 }
 
 #stack2 {
@@ -151,9 +153,41 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-end;
-    width: 100%;
+    width: 98%;
     
 }
+
+textarea {
+    resize: none;
+    height: 26em;
+    width: 18em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    width: 100%;
+}
+#Save {
+    width: 100%;
+    background-color: gray;
+    border-radius: 5%;
+}
+
  
+@media screen and (max-width: 760px) {
+    input {
+        font-size: 0.8em;
+    }
+}
 
+@media screen and (min-width: 990px) {
+    label {
+        font-size: 1.2em;
+    }
+}
 
+@media screen and (max-width: 485px) {
+    input {
+        font-size: 0.5em;
+    }
+}
