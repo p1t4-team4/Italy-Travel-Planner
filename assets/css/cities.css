@@ -9,24 +9,14 @@ body {
   }
   nav {
     position: relative;
+    font-family: 'Times New Roman', Times, serif !important;
   }
-  /* nav{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  } */
+  
   header {
     background: linear-gradient(90deg, green, white, red);
     color: black;
     padding: 5px;
-    /* font-family: Brush Script MT; */
     font-style: italic;
-
-    /* text-decoration: underline; */
-  }
-
-  nav {
-    font-family: 'Times New Roman', Times, serif !important;
   }
 
   #buttonLink {
@@ -40,29 +30,18 @@ body {
     color: black;
     border: none;
     cursor: pointer;
-    /* width: 33%; */
   }
+
   main {
     display:flex;
-    /* flex-direction: column; */
-    /* align-items: flex-start;
-    margin: 0 auto; */
-    /* height: 100vmin;
-    width: 100vw;  */
   }
+
   h1 {
     text-align: center;
     padding:5px;
     font-size: 3em;
-   /* text-decoration: underline; */
   }
   
-  /* img {
-   width: 60%;
-   height: 40%;
-   padding: 15px;
-   display: block;
-   float: right; */
 
   #imgR {
     float: right;

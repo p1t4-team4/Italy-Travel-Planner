@@ -29,7 +29,6 @@ header {
     color: black;
     padding: 5px;
     font-style: italic;
-    /* text-decoration: underline; */
 }
 
   
@@ -59,7 +58,7 @@ footer {
     height: 10em;
     background-image: url(../Photos/Rome.jpg); 
     background-size: cover;
-    align-content: end; */
+    align-content: end; 
 }
 
 #activities,
@@ -81,7 +80,7 @@ footer {
 {
     list-style-type: none;
     padding: 0;
-    background-color: white;
+    /* background-color: white; */
 }
 
 #activitiesList li
@@ -104,7 +103,7 @@ footer {
   border: none;
   height: 40px;
   cursor: pointer;
-  background-color: #ff7034;
+  background-color: #001b44;
   color: white;
   font-size: 1em;
 }
@@ -120,14 +119,12 @@ footer {
     border-color: black;
 }
 
-
-
 #budgetList
 /* #budgetList2  */
 {
     list-style-type: none;
     padding: 0;
-    background-color: white;
+    /* background-color: white; */
 }
 
 #budgetList li
@@ -141,6 +138,85 @@ footer {
   color: white;
   font-size: 1.5em;
   line-height: 1.5;
+}
+
+#budget li button
+/* #activities2 li button */
+{
+  float: right;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  background-color: #001b44;
+  color: white;
+  font-size: 1em;
+}
+
+
+#restaurantsList
+/* #activitiesList2  */
+{
+    list-style-type: none;
+    padding: 0;
+    /* background-color: white; */
+}
+
+#restaurantsList li
+/* #activitiesList2 li */
+{
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color:  #001b44;
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+#restaurants li button
+/* #activities2 li button */
+{
+  float: right;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  background-color: #001b44;
+  color: white;
+  font-size: 1em;
+}
+
+#placesList
+/* #activitiesList2  */
+{
+    list-style-type: none;
+    padding: 0;
+    /* background-color: white; */
+}
+
+#placesList li
+/* #activitiesList2 li */
+{
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color:  #001b44;
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+#places li button
+/* #activities2 li button */
+{
+  float: right;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  background-color: #001b44;
+  color: white;
+  font-size: 1em;
 }
 
 #stack1 {

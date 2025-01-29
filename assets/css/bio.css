@@ -4,11 +4,31 @@ body {
     color: black;
     margin: 0;
     padding:0 ;
-
 }
+
 nav {
     position: relative;
 }
+
+header {
+    background: linear-gradient(90deg, green, white, red);
+    color: black;
+    padding: 5px;
+    font-style: italic;
+  }
+
+#buttonLink {
+    flex-direction: row;
+    justify-content: right;
+    text-align: right;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
 
 .container {
     width: 80%;
@@ -20,7 +40,7 @@ nav {
 }
 
 div.custom-border {
-    border: 5px solid #28a745; 
+    border: 5px solid #080808; 
     padding: 15px; 
     border-radius: 8px;
     margin: 20px auto; 
