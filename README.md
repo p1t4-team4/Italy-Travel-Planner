@@ -21,7 +21,7 @@ This webpage can be used to mark individual city within Italy that user has or h
 ### Doyle Martin - https://github.com/DoyleMartin
 ### Andrew Cerna - https://github.com/amcerna
 ### Christopher Del Grosso - https://github.com/cdgrosso
-### Zuhayr Pigot - 
+### Zuhayr Pigot - https://github.com/Gzhub8411
 
 ## License
 
