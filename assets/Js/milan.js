@@ -12,6 +12,7 @@ const budgetForm = document.querySelector('#budgetForm');
 const itemInput = document.querySelector('#item');
 const priceInput = document.querySelector('#price');
 const budgetList = document.querySelector('#budgetList');
+const journalInput = document.querySelector('#journalText');
 
 
 let activities = [];
@@ -20,30 +21,31 @@ let places = [];
 let budget = [];
 let total = 0;
 
-if (localStorage.getItem('activities') != undefined){
-    activities = JSON.parse(localStorage.getItem('activities'));
+if (localStorage.getItem('milan_activities') != undefined){
+    activities = JSON.parse(localStorage.getItem('milan_activities'));
 }
 
-if (localStorage.getItem('restaurants') != undefined){
-  restaurants = JSON.parse(localStorage.getItem('restaurants'));
+if (localStorage.getItem('milan_restaurants') != undefined){
+  restaurants = JSON.parse(localStorage.getItem('milan_restaurants'));
 }
 
-if (localStorage.getItem('places') != undefined){
-  places = JSON.parse(localStorage.getItem('places'));
+if (localStorage.getItem('milan_places') != undefined){
+  places = JSON.parse(localStorage.getItem('milan_places'));
 }
 
-if (localStorage.getItem('budget') != undefined){
-  budget = JSON.parse(localStorage.getItem('budget'));
+if (localStorage.getItem('milan_budget') != undefined){
+  budget = JSON.parse(localStorage.getItem('milan_budget'));
 }
 
-if (localStorage.getItem('total') != undefined){
-  total = localStorage.getItem('total');
+if (localStorage.getItem('milan_total') != undefined){
+  total = localStorage.getItem('milan_total');
 }
 
 renderBudget();
 renderActivities();
 renderPlaces();
 renderRestaurants();
+renderJournal()
 
 activitiesForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -52,7 +54,7 @@ activitiesForm.addEventListener('submit', function (event) {
       return;
     }
     activities.push(activitiesText);
-    localStorage.setItem('activities', JSON.stringify(activities));
+    localStorage.setItem('milan_activities', JSON.stringify(activities));
     activitiesInput.value = '';
 
     renderActivities();
@@ -80,8 +82,8 @@ activitiesList.addEventListener('click', function (event) {
   const element = event.target;
   if (element.matches('button') === true) {
     const index = element.parentElement.getAttribute('data-index');
-    localStorage.setItem('activities', JSON.stringify(activities));
     activities.splice(index, 1);
+    localStorage.setItem('milan_activities', JSON.stringify(activities));
     renderActivities();
   }
 });
@@ -95,7 +97,7 @@ restaurantsForm.addEventListener('submit', function (event) {
     return;
   }
   restaurants.push(restaurantsText);
-  localStorage.setItem('restaurants', JSON.stringify(restaurants));
+  localStorage.setItem('milan_restaurants', JSON.stringify(restaurants));
   restaurantsInput.value = '';
 
   renderRestaurants();
@@ -123,8 +125,9 @@ restaurantsList.addEventListener('click', function (event) {
 const element = event.target;
 if (element.matches('button') === true) {
   const index = element.parentElement.getAttribute('data-index');
-  localStorage.setItem('restaurants', JSON.stringify(restaurants));
   restaurants.splice(index, 1);
+  localStorage.setItem('milan_restaurants', JSON.stringify(restaurants));
+
   renderRestaurants();
 }
 });
@@ -138,7 +141,7 @@ placesForm.addEventListener('submit', function (event) {
     return;
   }
   places.push(placesText);
-  localStorage.setItem('places', JSON.stringify(places));
+  localStorage.setItem('milan_places', JSON.stringify(places));
   placesInput.value = '';
 
   renderPlaces();
@@ -166,8 +169,9 @@ placesList.addEventListener('click', function (event) {
 const element = event.target;
 if (element.matches('button') === true) {
   const index = element.parentElement.getAttribute('data-index');
-  localStorage.setItem('places', JSON.stringify(places));
   places.splice(index, 1);
+  localStorage.setItem('milan_places', JSON.stringify(places));
+
   renderPlaces();
 }
 });
@@ -188,8 +192,8 @@ budgetForm.addEventListener('submit', function (event) {
     console.log(total)
   }
 
-  localStorage.setItem('budget', JSON.stringify(budget));
-  localStorage.setItem('total', JSON.stringify(total));
+  localStorage.setItem('milan_budget', JSON.stringify(budget));
+  localStorage.setItem('milan_total', JSON.stringify(total));
   itemInput.value = '';
   priceInput.value = '';
   renderBudget();
@@ -233,8 +237,29 @@ budgetList.addEventListener('click', function (event) {
     for(i=0; i < budget.length; i++){
       total = Number(total) + Number(budget[i][1]);
     }
-    localStorage.setItem('budget', JSON.stringify(budget));
-    localStorage.setItem('total', JSON.stringify(total));
+    localStorage.setItem('milan_budget', JSON.stringify(budget));
+    localStorage.setItem('milan_total', JSON.stringify(total));
     renderBudget();
   }
 });
+
+journalForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const journalText = journalInput.value.trim();
+  if (placesText === '') {
+    return;
+  }
+  localStorage.setItem('milan_JournalSave', journalText);
+});
+
+journalForm.addEventListener('click', function (event) {
+  const element = event.target;
+  if (element.matches('button') === true) {
+    const journalText = journalInput.value.trim();
+    localStorage.setItem('milan_JournalSave', journalText);
+  }
+});
+
+function renderJournal(){
+  journalInput.value = localStorage.getItem('milan_JournalSave');
+}

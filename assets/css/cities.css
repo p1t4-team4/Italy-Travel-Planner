@@ -111,3 +111,12 @@ body {
    footer { 
     text-align: center;
    }
+
+   @media screen and (max-width: 760px) {
+    p {
+      font-size: large;
+    }
+    strong {
+      font-size: larger;
+    }
+   }

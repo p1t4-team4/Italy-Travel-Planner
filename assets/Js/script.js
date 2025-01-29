@@ -14,11 +14,11 @@ let visitedArray  = [];
 
 
 cities = [
-{name: "Rome", visited: false, button: romeButton},
-{name: "Naples", visited: false, button: naplesButton},
-{name: "Venice", visited: false, button: veniceButton},
-{name: "Como", visited: false, button: comoButton},
-{name: "Milan", visited: false, button: milanButton},
+{name: "Rome", visited: false, button: romeButton, imageURL: "url(./assets/Photos/Rome.jpg)"},
+{name: "Naples", visited: false, button: naplesButton, imageURL: "url(./assets/Photos/naples.jpg)"},
+{name: "Venice", visited: false, button: veniceButton,  imageURL: "url(./assets/Photos/venice.jpg)"},
+{name: "Como", visited: false, button: comoButton,  imageURL: "url(./assets/Photos/Como_2.jpg)"},
+{name: "Milan", visited: false, button: milanButton,  imageURL: "url(./assets/Photos/milan.jpg)"},
 ]
 
 
@@ -93,17 +93,23 @@ italy.addEventListener("click", e =>{
         
         cityWindow = document.createElement('div');
         cityWindow.setAttribute("id", "cityWindow");
+        cityWindow.setAttribute("style", `background-image: ${cities[i].imageURL}`);
+
         X = document.createElement('div');
         X.setAttribute("id", "X");
         X.innerText = "✖";
+
         yesNo = document.createElement('div');
         yesNo.setAttribute("id", "yesNo");
+
         have = document.createElement('div');
         have.setAttribute("id", "have");
         have.innerText = "Been";
+
         haveNot = document.createElement('div');
         haveNot.innerText = "Not Been";
         haveNot.setAttribute("id", "haveNot");
+
         Blog = document.createElement('div');
         Blog.setAttribute("id", "blog");
         Blog.innerText = "Blog";
@@ -111,6 +117,7 @@ italy.addEventListener("click", e =>{
         cities[i].button.appendChild(cityWindow);
         cities[i].button.setAttribute("status", "active");
         cities[i].button.style.zIndex = 9;
+        
         cityWindow.appendChild(X);
         cityWindow.appendChild(yesNo);
         yesNo.appendChild(have);

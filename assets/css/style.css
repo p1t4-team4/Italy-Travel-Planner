@@ -53,6 +53,7 @@ body {
   button {
     position: absolute;
     border-radius: 50%;
+    /* font-size: 0.5em; */
   }
 
   #buttonLink {
@@ -79,7 +80,7 @@ body {
   #cityWindow {
     width: 8em;
     height: 10em;
-    background-image: url(../Photos/Rome.jpg); 
+    /* background-image: url(../Photos/Rome.jpg);  */
     background-size: cover;
     align-content: end; */
   }
@@ -93,6 +94,10 @@ body {
     grid-auto-columns: span 2;
     align-content: end;
     font-size: .8em;
+  }
+
+  .btn {
+    font-size: 75%;
   }
 
   #X {
@@ -145,4 +150,16 @@ body {
     width: 20%;
     height: 40%;
     margin: 10px;
+  }
+
+  @media screen and (max-width: 760px) {
+    .btn {
+      font-size: 0.5em;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .btn {
+      font-size: 1.1em;
+    }
   }
