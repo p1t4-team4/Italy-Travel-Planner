@@ -58,7 +58,7 @@ body {
 
   #buttonLink {
     flex-direction: row;
-    float: inline-end;
+    /* float: inline-end; */
     text-align: right;
     font-size: 1.5em;
     padding: 10px;
@@ -67,7 +67,7 @@ body {
     color: black;
     border: none;
     cursor: pointer;
-    width: 33%;
+    /* width: 33%; */
   }
 
   footer {
@@ -82,7 +82,7 @@ body {
     height: 10em;
     /* background-image: url(../Photos/Rome.jpg);  */
     background-size: cover;
-    align-content: end; */
+    align-content: end; 
   }
 
   #yesNo {

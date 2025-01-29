@@ -71,7 +71,7 @@ function renderActivities() {
       li.setAttribute('data-index', i);
 
       const button = document.createElement('button');
-      button.textContent = 'Remove';
+      button.textContent = '✖';
 
       li.appendChild(button);
       activitiesList.appendChild(li);
@@ -114,7 +114,7 @@ function renderRestaurants() {
     li.setAttribute('data-index', i);
 
     const button = document.createElement('button');
-    button.textContent = 'Remove';
+    button.textContent = '✖';
 
     li.appendChild(button);
     restaurantsList.appendChild(li);
@@ -158,7 +158,7 @@ function renderPlaces() {
     li.setAttribute('data-index', i);
 
     const button = document.createElement('button');
-    button.textContent = 'Remove';
+    button.textContent = '✖';
 
     li.appendChild(button);
     placesList.appendChild(li);
@@ -207,11 +207,11 @@ function renderBudget() {
     const price = budget[i][1];
 
     const li = document.createElement('li');
-    li.textContent = `Item: ${item} Price: ${price}`;
+    li.textContent = `Item: ${item}- Price: $${price}`;
     li.setAttribute('data-index', i);
     
     const button = document.createElement('button');
-    button.textContent = 'Remove';
+    button.textContent = '✖';
 
     li.appendChild(button);
     budgetList.appendChild(li);
@@ -220,7 +220,7 @@ function renderBudget() {
   if (document.querySelector("#Total") == undefined ){
     totalDiv = document.createElement("div");
     totalDiv.setAttribute("id",  "Total");
-    totalDiv.innerText = `Total: ${total}`;
+    totalDiv.innerText = `Total: $${total}`;
     budgetSection.appendChild(totalDiv);
   }else{
     totalDiv = document.querySelector("#Total");
@@ -256,6 +256,7 @@ journalForm.addEventListener('click', function (event) {
   const element = event.target;
   if (element.matches('button') === true) {
     const journalText = journalInput.value.trim();
+    alert('Journal has been saved');
     localStorage.setItem('milan_JournalSave', journalText);
   }
 });
